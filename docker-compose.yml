@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: profilak
+      POSTGRES_USER: profilak
+      POSTGRES_PASSWORD: ${PROFILAK_DB_PASSWORD:?Set PROFILAK_DB_PASSWORD}
+    ports:
+      - "127.0.0.1:${PROFILAK_DB_PORT:-15434}:5432"
+    volumes:
+      - profilak_data:/var/lib/postgresql/data
+
+volumes:
+  profilak_data:

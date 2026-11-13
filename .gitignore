@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.idea/
+.gradle/
+build/
+node_modules/
+uploads/
+test-uploads/
+*.log
+AGENTS.md
+.codex
